@@ -1,0 +1,13 @@
+server:
+  name: "project-api"
+  addr: "127.0.0.1:80"
+zap:
+  debugFileName: "D:\\Go\\Project\\PMsys\\logs\\debug\\project-debug.log"
+  infoFileName: "D:\\Go\\Project\\PMsys\\logs\\info\\project-info.log"
+  warnFileName: "D:\\Go\\Project\\PMsys\\logs\\error\\project-error.log"
+  maxSize: 500,
+  maxAge: 28,
+  MaxBackups: 3
+etcd:
+  addrs:
+    - "120.48.87.191:2379"

@@ -1,0 +1,56 @@
+server:
+  name: "project-project"
+  addr: "127.0.0.1:8081"
+zap:
+  debugFileName: "D:\\Go\\Project\\PMsys\\logs\\debug\\project-debug.log"
+  infoFileName: "D:\\Go\\Project\\PMsys\\logs\\info\\project-info.log"
+  warnFileName: "D:\\Go\\Project\\PMsys\\logs\\error\\project-error.log"
+  maxSize: 500,
+  maxAge: 28,
+  MaxBackups: 3
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+grpc:
+  addr: "127.0.0.1:8882"
+  name: "project"
+  version: "1.0.0"
+  weight: 100
+etcd:
+  addrs:
+    - "120.48.87.191:2379"
+mysql:
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3306
+  db: pm_sys
+db:
+  separation: false
+  master:
+    name: master
+    username: root
+    password: root
+    host: 127.0.0.1
+    port: 3306
+    db: pm_sys
+  slave:
+    - username: root
+      password: root
+      host: 127.0.0.1
+      port: 3306
+      db: pm_sys_slave1
+      name: slave1
+    - username: root
+      password: root
+      host: 127.0.0.1
+      port: 3306
+      db: pm_sys_slave1
+      name: slave2
+jwt:
+  accessExp: 7
+  refreshExp: 14
+  accessSecret: cfc2013114
+  refreshSecret: cfc_2013114
